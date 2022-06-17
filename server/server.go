@@ -8,13 +8,12 @@ import (
 )
 
 const (
-		ServerAddr  = "127.0.0.10:2152"
-		ClientAddr  = "127.0.0.1:2152"
-	)
+	ServerAddr  = "127.0.0.10:2152"
+	ClientAddr  = "127.0.0.1:2152"
+	ServerAddr2 = "127.0.0.10:2123"
+)
 
 func GTPServer() {
-
-
 
 	var udpaddr *net.UDPAddr
 
@@ -26,8 +25,8 @@ func GTPServer() {
 
 		var buf = make([]byte, 1024)
 		_, addr, err := udpconn.ReadFromUDP(buf)
-		if err!=nil{
-			fmt.Println("err:",err)
+		if err != nil {
+			fmt.Println("err:", err)
 			return
 		}
 		switch buf[1] {
@@ -42,17 +41,4 @@ func GTPServer() {
 		}
 	}
 
-}
-
-func GTPClient()  {
-
-	var udpaddr *net.UDPAddr
-
-	udpaddr, _ = net.ResolveUDPAddr("udp4", ClientAddr)
-
-	udpconn, err := net.ListenUDP("udp", udpaddr)
-	if err!=nil{
-		fmt.Println(udpconn)
-	}
-	
 }
