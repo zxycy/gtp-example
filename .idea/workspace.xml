@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc5c92b9-85fa-4b51-a058-596229a237d5" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/gtpv1_test/gtp/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gtpv1_test/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gtpv2_test/gtp/message.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gtp/build.go" beforeDir="false" afterPath="$PROJECT_DIR$/gtp/build.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gtp/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/gtp/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gtp/build.go" beforeDir="false" afterPath="$PROJECT_DIR$/gtpv1_test/gtp/build.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gtp/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/gtpv1_test/gtp/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pducontainer/dl_pdusession_information.go" beforeDir="false" afterPath="$PROJECT_DIR$/gtpv1_test/pducontainer/dl_pdusession_information.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pducontainer/pdu_session_container_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gtpv1_test/pducontainer/pdu_session_container_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pducontainer/ul_pdusession_information.go" beforeDir="false" afterPath="$PROJECT_DIR$/gtpv1_test/pducontainer/ul_pdusession_information.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pducontainer/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/gtpv1_test/pducontainer/util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/gtpv1_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +46,18 @@
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/go.mod" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gtpv1_test/pducontainer/ul_pdusession_information.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gtpv1_test/pducontainer/pdu_session_container_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gtpv1_test/pducontainer/dl_pdusession_information.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gre/gre.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gtpv1_test/pducontainer/util.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gtpv1_test/gtp/server.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/gtpv1_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gtpv1_test/gtp/build.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gtpv1_test/main.go" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -65,74 +83,75 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\zhang\Documents\gtp-example\pducontainer" />
+      <recent name="C:\Users\zhang\Documents\gtp-example\gtpv2_test\gtp" />
+      <recent name="C:\Users\zhang\Documents\gtp-example\gtpv2_test" />
+      <recent name="C:\Users\zhang\Documents\gtp-example\gtpv1_test" />
+      <recent name="C:\Users\zhang\Documents\gtp-example\gtpv1_test\gtp" />
+      <recent name="C:\Users\zhang\Documents\gtp-example" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 测试.gtp-example/server 中的 TestEchoRequest">
-    <configuration name="go build gtp-example" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go 测试.gtp-example/test 中的 TestRouterSolicitation">
+    <configuration name="go build gtp-example/gtpv1_test" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gtp-example" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
+      <package value="gtp-example/gtpv1_test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/gtpv1_test/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gtp-example" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
       <package value="gtp-example" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/main.go" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/gtpv1_test/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="gtp-example/pducontainer 中的 TestDLPDUSESSIONINFORMATION" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="gtp-example/test 中的 TestCreateSessionRequest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="gtp-example" />
-      <working_directory value="$PROJECT_DIR$/pducontainer" />
+      <working_directory value="$PROJECT_DIR$/test" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="gtp-example/pducontainer" />
+      <package value="gtp-example/test" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestDLPDUSESSIONINFORMATION\E$" />
+      <pattern value="^\QTestCreateSessionRequest\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="gtp-example/pducontainer 中的 TestULPDUSESSIONINFORMATION" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="gtp-example/test 中的 TestRouterSolicitation" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="gtp-example" />
-      <working_directory value="$PROJECT_DIR$/pducontainer" />
+      <working_directory value="$PROJECT_DIR$/test" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="gtp-example/pducontainer" />
+      <package value="gtp-example/test" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestULPDUSESSIONINFORMATION\E$" />
+      <pattern value="^\QTestRouterSolicitation\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="gtp-example/server 中的 TestEchoRequest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="gtp-example/test 中的 TestV2EchoRequest (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="gtp-example" />
-      <working_directory value="$PROJECT_DIR$/server" />
+      <working_directory value="$PROJECT_DIR$/test" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="gtp-example/server" />
+      <package value="gtp-example/test" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestEchoRequest\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="gtp-example/server 中的 TestGTPServer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="gtp-example" />
-      <working_directory value="$PROJECT_DIR$/server" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="gtp-example/server" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestGTPServer\E$" />
+      <pattern value="^\QTestV2EchoRequest\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go 测试.gtp-example/server 中的 TestEchoRequest" />
-        <item itemvalue="Go 测试.gtp-example/server 中的 TestGTPServer" />
-        <item itemvalue="Go 构建.go build gtp-example" />
-        <item itemvalue="Go 测试.gtp-example/pducontainer 中的 TestULPDUSESSIONINFORMATION" />
-        <item itemvalue="Go 测试.gtp-example/pducontainer 中的 TestDLPDUSESSIONINFORMATION" />
+        <item itemvalue="Go 测试.gtp-example/test 中的 TestRouterSolicitation" />
+        <item itemvalue="Go 构建.go build main.go" />
+        <item itemvalue="Go 构建.go build gtp-example/gtpv1_test" />
+        <item itemvalue="Go 测试.gtp-example/test 中的 TestCreateSessionRequest" />
+        <item itemvalue="Go 测试.gtp-example/test 中的 TestV2EchoRequest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -164,12 +183,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/pducontainer/dl_pdusession_information.go</url>
+          <url>file://$PROJECT_DIR$/gtpv1_test/pducontainer/dl_pdusession_information.go</url>
           <line>12</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/pducontainer/dl_pdusession_information.go</url>
+          <url>file://$PROJECT_DIR$/gtpv1_test/pducontainer/dl_pdusession_information.go</url>
           <line>29</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>

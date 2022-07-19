@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/mdlayher/ndp"
 	"github.com/wmnsk/go-gtp/gtpv1/message"
-	"gtp-example/pducontainer"
+	pducontainer2 "gtp-example/gtpv1_test/pducontainer"
 	"net"
 	"net/netip"
 )
@@ -50,7 +50,7 @@ func BuildRAMessage(TEID uint32, QFI byte, UEIPv6 net.IP, Prefix netip.Prefix) [
 	}
 
 	//IPv6 header
-	v6header, _ := pducontainer.NewICMPv6Header(len(body), net.ParseIP(cfgIP), UEIPv6)
+	v6header, _ := pducontainer2.NewICMPv6Header(len(body), net.ParseIP(cfgIP), UEIPv6)
 
 	//gtp message
 	var tempBody []byte
@@ -59,7 +59,7 @@ func BuildRAMessage(TEID uint32, QFI byte, UEIPv6 net.IP, Prefix netip.Prefix) [
 	gtpMessage := message.NewTPDU(TEID, tempBody)
 
 	//add gtp extension header
-	dlPdu := pducontainer.NewDlPduSessionInfo(QFI)
+	dlPdu := pducontainer2.NewDlPduSessionInfo(QFI)
 	container, err := dlPdu.MarshalBinary()
 	exheader := message.NewExtensionHeader(message.ExtHeaderTypePDUSessionContainer, container, 0)
 	gtpMessage.AddExtensionHeaders(exheader)
@@ -76,7 +76,7 @@ func BuildRS() []byte {
 	DstAddr, _ := netip.ParseAddr("ff02::2")
 	body, _ := ndp.MarshalMessageChecksum(&icmp, SrcAddr, DstAddr)
 
-	v6header, _ := pducontainer.NewICMPv6Header(len(body), net.ParseIP("fe80::3"), net.ParseIP("ff02::2"))
+	v6header, _ := pducontainer2.NewICMPv6Header(len(body), net.ParseIP("fe80::3"), net.ParseIP("ff02::2"))
 
 	var tempBody []byte
 	tempBody = append(tempBody, v6header...)
@@ -84,7 +84,7 @@ func BuildRS() []byte {
 	gtpMessage := message.NewTPDU(3, tempBody)
 
 	//add gtp extension header
-	dlPdu := pducontainer.NewDlPduSessionInfo(3)
+	dlPdu := pducontainer2.NewDlPduSessionInfo(3)
 	container, _ := dlPdu.MarshalBinary()
 	exheader := message.NewExtensionHeader(message.ExtHeaderTypePDUSessionContainer, container, 0)
 	gtpMessage.AddExtensionHeaders(exheader)
@@ -108,4 +108,10 @@ func BuildReply() []byte {
 		129, 0, 147, 226, 146, 235, 0, 0, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 57, 57, 32, 98,
 		111, 116, 116, 108, 101, 115, 32, 111, 102, 32, 98, 101, 101, 114, 32, 111, 110, 32, 116, 104, 101, 32, 119, 97, 108, 108}
 	return ping
+}
+
+func Buildttt() []byte {
+	return []byte{96, 7, 13, 0, 0, 64, 58, 63, 32, 1, 4, 112, 130, 135, 6, 23, 216, 107, 141, 7, 36, 111, 93, 61, 36, 7, 174, 128, 2, 0, 16, 1, 0, 0, 0, 0, 0, 0, 0, 32,
+		128, 0, 148, 226, 146, 235, 0, 0, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 57, 57, 32, 98,
+		111, 116, 116, 108, 101, 115, 32, 111, 102, 32, 98, 101, 101, 114, 32, 111, 110, 32, 116, 104, 101, 32, 119, 97, 108, 108}
 }
